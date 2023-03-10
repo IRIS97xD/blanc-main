@@ -1,0 +1,948 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya&family=Inter:wght@200&family=Jua&family=Source+Serif+Pro:wght@200&family=Vollkorn&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya&family=Berkshire+Swash&family=Inter:wght@200&family=Jua&family=Source+Serif+Pro:wght@200&family=Vollkorn&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -ms-overflow-style: none;
+  background: #191919;
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 24px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: ghostwhite;
+}
+
+a:hover,
+.contact_info p:hover,
+.contact_info a:hover {
+  color: #ffd700;
+  text-decoration: none;
+}
+.navbar li:after,
+.change_navbar li:after,
+.contact_info p:after,
+.contact_info a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.navbar li:hover:after,
+.change_navbar li:hover:after,
+.contact_info p:hover:after,
+.contact_info a:hover:after {
+  width: 100%;
+  background: #ffd700;
+}
+
+h1,
+h2,
+h3 {
+  color: ghostwhite;
+  font-weight: normal;
+}
+p {
+  color: wheat;
+}
+
+/* Navbar */
+.header {
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  background: transparent;
+}
+.change_navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  background: #191919b8;
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.navbar_logo {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 3%;
+}
+.navbar_logo img {
+  width: 70%;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.navbar_logo img:hover {
+  opacity: 0.8;
+}
+.navbar ul,
+.change_navbar ul {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar ul li,
+.change_navbar ul li {
+  padding: 0% 3%;
+}
+.navbar ul li a,
+.change_navbar ul li a {
+  font-size: 18px;
+  font-weight: bold;
+}
+#promotion {
+  pointer-events: none;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+/* ================= Home =================*/
+.header_content {
+  width: 90%;
+  height: 101vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Berkshire Swash", cursive;
+}
+.header_content div {
+  width: 30%;
+}
+.header_content div h1 {
+  font-size: 150px;
+  font-weight: 300;
+}
+.header_content div img {
+  width: 10%;
+}
+.header_content div h2 {
+  font-size: 60px;
+  font-weight: 300;
+}
+.header_content .madeby {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Blanche {
+  position: relative;
+  left: -40%;
+}
+#Make {
+  position: relative;
+  left: 3%;
+}
+#iris {
+  position: relative;
+  left: 50%;
+}
+#logo360 {
+  width: 10%;
+  min-width: 200px;
+  margin-left: 10%;
+}
+img.infinite_rotating_logo {
+  animation: rotate_image 15s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes rotate_image {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============= Villa ================= */
+.Villa {
+  width: 96%;
+  margin: auto;
+  padding-top: 15%;
+  overflow: hidden;
+}
+
+.Villa h1 {
+  font-size: 4.5vw;
+  font-weight: lighter;
+  letter-spacing: 6px;
+}
+
+.Villa .sublist {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10%;
+}
+
+.Villa .sublist p {
+  font-size: 18px;
+  font-weight: lighter;
+  padding-right: 3%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.Villa .sublist p:hover {
+  color: sandybrown;
+}
+
+.Villa .house_content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Villaimg {
+  width: 100%;
+  background: url("https://irisiris99.github.io/blanc/imgs/Villaimg1.jpg")
+    no-repeat;
+  background-size: contain;
+  margin-right: 5%;
+}
+.Villaimg img {
+  width: 100%;
+  visibility: hidden;
+}
+
+.Villa .house_content div {
+  width: 50%;
+}
+
+.Villa .house_content_font {
+  margin-top: 10%;
+}
+
+.Villa .house_content_font h3 {
+  font-size: 28px;
+  width: 70%;
+  padding: 5% 0%;
+}
+
+.Villa .house_content_font p {
+  width: 70%;
+  font-size: 16px;
+}
+
+.house_content2 {
+  width: 100%;
+  padding: 10% 0%;
+  margin-left: 27%;
+  background: url("https://irisiris99.github.io/blanc/imgs/Villaimg2.jpg")
+    no-repeat;
+  background-size: 80%;
+}
+
+.house_content2 img {
+  width: 70%;
+  visibility: hidden;
+}
+
+.metro {
+  width: 100%;
+  text-align: center;
+  background-image: url("../public/imgs/background_3.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 10% 0%;
+}
+.metro h1 {
+  font-size: 100px;
+  padding: 6% 0%;
+}
+.full_back {
+  width: 100%;
+}
+.full_back img {
+  width: 100%;
+}
+.full_back_font {
+  width: 100%;
+  padding: 5% 0%;
+  position: relative;
+  left: 30%;
+}
+.full_back_font p {
+  font-size: 20px;
+  width: 40%;
+}
+.full_back2 {
+  width: 100%;
+  height: 1px;
+  padding: 30% 0%;
+  position: relative;
+  left: 30%;
+  background-image: url("../public/imgs/background_5.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.full_back3and4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding: 32% 0%;
+}
+.full_back3 {
+  width: 60%;
+  height: 1px;
+  padding: 20% 0%;
+  background-image: url("../public/imgs/background_6.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-right: 5%;
+}
+.full_back4 {
+  width: 25%;
+  height: 1px;
+  padding: 13% 0%;
+  background-image: url("../public/imgs/background_7.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.rooms {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10% 0%;
+}
+
+.rooms div {
+  padding: 0% 3%;
+}
+.rooms div .hidden_box {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.rooms div div img {
+  width: 100%;
+  transition: 0.2s;
+}
+.rooms div div img:hover {
+  transform: scale(1.08);
+}
+
+.rooms div p {
+  font-size: 30px;
+  padding: 2% 0%;
+}
+
+.rooms2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 0%;
+}
+.rooms2 div div {
+  display: flex;
+  justify-content: center;
+}
+.rooms2 div .hidden_box {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.hidden_box img {
+  width: 70%;
+  transition: 0.2s;
+}
+.hidden_box img:hover {
+  transform: scale(0.9);
+}
+
+.rooms2 div p {
+  font-size: 30px;
+  padding: 2% 0%;
+  text-align: center;
+}
+
+/* ============== Floor ============= */
+.Floor {
+  background-color: #181818;
+}
+.Floor .spaces {
+  text-align: center;
+  overflow: hidden;
+}
+.Floor .spaces > h2 {
+  margin-top: 10%;
+  font-size: 7vw;
+}
+.Floor .spaces > h1 {
+  font-size: 12vw;
+  -webkit-text-fill-color: #191919;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  position: relative;
+  top: -8vw;
+}
+
+.Floor_back {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Floor_back p {
+  font-size: 24px;
+  width: 30%;
+}
+.Ent_Floor {
+  width: 100%;
+  padding: 5% 0%;
+  display: flex;
+  justify-content: space-between;
+}
+.Ent_FloorFont {
+  width: 30%;
+}
+.Ent_FloorFont ul {
+  position: sticky;
+  top: 30px;
+  padding-top: 28%;
+}
+.Ent_FloorImg {
+  width: 70%;
+  padding-top: 8%;
+}
+.floor_img_box {
+  width: 100%;
+  overflow: hidden;
+}
+.Ent_FloorImg img {
+  width: 100%;
+}
+.Ent_FloorFont ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1%;
+}
+.Ent_FloorFont ul button {
+  width: 40%;
+  min-width: 200px;
+  margin-bottom: 10%;
+  margin-left: 2%;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+.Ent_FloorFont ul button p {
+  font-size: 18px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.Ent_FloorFont ul button p:hover {
+  color: #ffd700;
+}
+
+.Floor_font {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Floor_font div {
+  width: 50%;
+  padding: 5%;
+}
+.Floor_font div h1 {
+  font-size: 4vw;
+}
+.Floor_font div p {
+  font-size: 20px;
+  padding: 3% 0%;
+}
+
+.Floor_img {
+  width: 100%;
+  float: right;
+}
+.Floor_img img {
+  width: 100%;
+  padding: 5%;
+}
+.Floor_img .floor {
+  width: 80%;
+  float: right;
+}
+#floor2 {
+  width: 80%;
+  float: right;
+}
+
+.Features {
+  width: 100%;
+  text-align: center;
+  padding-top: 5%;
+}
+.Features h1 {
+  font-size: 5vw;
+  font-weight: lighter;
+  padding: 8% 0%;
+}
+.floor_icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding-bottom: 5%;
+}
+.floor_icons div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.floor_icons div p {
+  width: 50%;
+  font-size: 20px;
+}
+.floor_icons div h5 {
+  font-size: 16px;
+  font-weight: lighter;
+  color: white;
+  padding: 3% 0%;
+}
+.Features > img {
+  width: 100%;
+}
+
+/* ============== Contact ================ */
+
+.contact {
+  width: 100%;
+  height: 101vh;
+  display: flex;
+  flex-direction: column;
+}
+.space_nav {
+  width: 100%;
+  height: 80px;
+}
+.contact_title {
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+.contact_title2 {
+  padding-left: 5%;
+}
+.contact_title2 h1 {
+  font-size: 4vw;
+}
+.contact_img {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -5vw;
+  z-index: -1;
+}
+.contact_img img {
+  width: 100%;
+  padding: 0% 5%;
+}
+.contact_info {
+  width: 100%;
+  margin: auto;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact_info a {
+  color: ghostwhite;
+}
+.contact_end {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+}
+
+/* ========= Responsive ========= */
+
+@media screen and (max-width: 1025px) {
+  /* ====== Navbar ====== */
+  .header_content div h1 {
+    font-size: 100px;
+  }
+  #Blanche {
+    position: relative;
+    left: -50%;
+  }
+  #iris {
+    position: relative;
+    left: -20%;
+  }
+
+  /* ====== Villa ====== */
+  .Villa .sublist p {
+    font-size: 14px;
+  }
+  .house_content {
+    padding-bottom: 10%;
+  }
+  .metro {
+    padding: 25% 0%;
+  }
+  .house_content_font h3 {
+    display: none;
+  }
+  .rooms div p,
+  .rooms2 div p {
+    font-size: 20px;
+  }
+
+  /* ====== Floor ====== */
+  .spaces {
+    padding-top: 25%;
+    margin-bottom: 15%;
+  }
+  .Floor_back {
+    padding-bottom: 15%;
+  }
+  .Floor_back p {
+    width: 60%;
+  }
+  .Floor_font div p {
+    font-size: 16px;
+  }
+
+  /* ====== Contact ====== */
+  .space_nav {
+    padding-top: 15%;
+  }
+  .contact_info div a {
+    font-size: 18px;
+  }
+  .contact_info div p {
+    font-size: 18px;
+  }
+  .contact_end {
+    padding-top: 20%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* ====== Home ====== */
+  #Blanche {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 0%;
+  }
+  #iris {
+    display: none;
+  }
+  #Make {
+    display: none;
+  }
+  #logo360 {
+    margin: 0;
+    position: relative;
+    top: 50%;
+  }
+  .navbar,
+  .change_navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar ul {
+    width: 100%;
+    padding: 1.5% 0%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 38%;
+  }
+  .change_navbar ul {
+    width: 100%;
+    padding: 1.5% 0%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 38%;
+    background: #191919b8;
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  .navbar_logo {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 25%;
+  }
+  .navbar_logo a {
+    text-align: center;
+  }
+
+  /* ====== Villa ====== */
+  .Villa {
+    padding-top: 30%;
+  }
+  .Villa h1 {
+    font-size: 36px;
+    margin-bottom: 15%;
+    padding: 10% 0%;
+  }
+  .Villa .sublist {
+    display: none;
+  }
+  .house_content_font p {
+    width: 100%;
+  }
+  .house_content2 {
+    padding-bottom: 15%;
+  }
+  .metro {
+    background-size: cover;
+  }
+  .metro h1 {
+    font-size: 60px;
+    padding: 3% 0%;
+  }
+  .full_back_font {
+    width: 100%;
+    position: relative;
+    left: 0%;
+    text-align: center;
+    padding: 15% 0%;
+  }
+  .full_back_font p {
+    width: 80%;
+    margin: auto;
+  }
+
+  /* ====== Floor ====== */
+  .spaces {
+    padding-top: 30%;
+    padding-bottom: 10%;
+  }
+  .Floor_back p {
+    font-size: 16px;
+    padding-bottom: 10%;
+  }
+  .Ent_FloorFont ul {
+    display: none;
+  }
+  .Features div p {
+    font-size: 14px;
+  }
+  .Features div h5 {
+    font-size: 14px;
+  }
+
+  /* ====== Contact ====== */
+  .space_nav {
+    padding-top: 30%;
+  }
+  .contact_info div a {
+    font-size: 14px;
+  }
+  .contact_info div p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  /* ====== Navbar ====== */
+  .navbar ul li,
+  .change_navbar ul li {
+    padding: 6px;
+  }
+  .navbar ul li a,
+  .change_navbar ul li a {
+    font-size: 12px;
+  }
+  #Blanche {
+    font-size: 50px;
+  }
+
+  /* ====== Villa ====== */
+  .Villa h1 {
+    font-size: 32px;
+    padding: 30% 0%;
+  }
+  .house_content {
+    display: flex;
+    flex-direction: column;
+  }
+  .house_content_font p {
+    display: none;
+  }
+  .Villaimg {
+    min-width: 260px;
+    margin: 0;
+    padding: 10% 0%;
+    background-position: none;
+  }
+  .house_content2 {
+    margin-left: 10%;
+    padding: 25% 0%;
+    background-position-y: none;
+  }
+  .metro h1 {
+    font-size: 36px;
+    padding: 4% 0%;
+  }
+  .rooms {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .rooms div {
+    padding: 5% 0%;
+  }
+  .rooms2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .rooms2 div {
+    padding: 5% 0%;
+  }
+
+  /* ====== Floor ======= */
+  .spaces {
+    padding-top: 70%;
+  }
+  .Floor_back p {
+    width: 90%;
+  }
+  .Ent_Floor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Ent_FloorFont {
+    display: none;
+  }
+  .Floor_font .del {
+    display: none;
+  }
+  .Floor_font div {
+    width: 100%;
+    text-align: center;
+  }
+  .Floor_font div h1 {
+    font-size: 40px;
+    padding: 20% 0%;
+  }
+  .floor_icons div img {
+    width: 60%;
+  }
+  .floor_icons div p {
+    width: 100%;
+    font-size: 12px;
+  }
+  .floor_icons div h5 {
+    display: none;
+  }
+  .Features div h1 {
+    font-size: 28px;
+  }
+  /* ====== Contact ====== */
+  .space_nav {
+    height: 200px;
+  }
+  .contact_info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact_info div {
+    padding: 5% 0%;
+  }
+  .contact_info div p {
+    padding: 2% 0%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navbar ul li,
+  .change_navbar ul li {
+    padding: 4px;
+  }
+  .navbar ul li a,
+  .change_navbar ul li a {
+    font-size: 8px;
+  }
+
+  /* ====== villa ====== */
+  .Villa h1 {
+    font-size: 24px;
+  }
+  .metro h1 {
+    font-size: 30px;
+    padding: 2% 0%;
+  }
+  .full_back_font p {
+    font-size: 14px;
+  }
+  .Floor_font div h1 {
+    width: 100%;
+    font-size: 26px;
+  }
+  .Features div h1 {
+    font-size: 22px;
+  }
+  .floor_icons {
+    padding: 10% 0%;
+  }
+
+  /* ====== Contact ====== */
+}
